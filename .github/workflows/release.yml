@@ -43,6 +43,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUBTOKEN }}
         with:
           tag_name: ${{ github.ref_name }}
+          release_name: "Release ${{ github.ref_name }}"  # 添加 release_name 参数
           body: "Automated release for version ${{ github.ref_name }}"
           draft: false
           prerelease: false
